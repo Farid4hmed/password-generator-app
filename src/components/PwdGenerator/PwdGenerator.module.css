@@ -1,0 +1,240 @@
+.parent{
+    height: 600px;
+    width: 480px;
+    background: black;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.password{
+    height: 70px;
+    width: 450px;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    background: #2f2e37;
+}
+
+.generator{
+    height: 450px;
+    width: 450px;
+    background: #2f2e37;
+    position: absolute;
+    left: 50%;
+    top: 62%;
+    transform: translate(-50%, -50%);
+}
+
+.title{
+    font-family:monospace;
+    color: #82808E;
+    position: absolute;
+    min-width: 30%;
+    font-size: 22.2px;
+    font-weight: 600;
+    left: 50%;
+    top: 3.5%;
+    transform: translate(-50%, -50%);
+
+}
+
+.charLength {
+    font-size: large;
+    font-weight: 600;
+    font-family: monospace;
+    color: white;
+    position: absolute;
+    top: 8.5%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+}
+
+.value {
+    font-family: monospace;
+    font-size: 32px;
+    font-weight:100;
+    color: #A4FFAF;
+    position: absolute;
+    top: 4.2%;
+    left: 85%;
+}
+
+.uppercase{
+position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 8%;
+    top: 25.5%;
+
+background: #24232B;
+border: 2px solid #FFFFFF;
+}
+.lowercase{
+    position: absolute;
+        width: 17px;
+        height: 17px;
+        left: 8%;
+        top: 35.5%;
+    
+    background: #24232B;
+    border: 2px solid #FFFFFF;
+}
+.numbers{
+    position: absolute;
+            width: 17px;
+            height: 17px;
+            left: 8%;
+            top: 45.5%;
+        
+        background: #24232B;
+        border: 2px solid #FFFFFF;
+}
+.symbols{
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        left: 8%;
+        top: 55.5%;
+            
+       background: #24232B;
+    border: 2px solid #FFFFFF;
+}
+
+.text1{
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    font-family: monospace;
+    position: absolute;
+    top: 25%;
+    left: 16.5%;
+}
+
+.text2{
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    font-family: monospace;
+    position: absolute;
+    top: 35%;
+    left: 16.5%;
+}
+
+.text3{
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    font-family: monospace;
+    position: absolute;
+    top: 45%;
+    left: 16.5%;
+}
+
+.text4{
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    font-family: monospace;
+    position: absolute;
+    top: 55%;
+    left: 16.5%;
+}
+
+.strength{
+    position: absolute;
+    width: 85%;
+    height: 12.5%;
+    left: 50%;
+    top: 71.5%;
+    transform: translate(-50%, -50%);
+
+background: #18171F;
+}
+
+.strengthTitle{
+    color:#82808E;
+    font-family: monospace;
+    font-size: 1.2rem;
+    font-weight: 100;
+    position: absolute;
+    top: 27%;
+    left: 5%;
+    letter-spacing: 1.5px;
+
+}
+
+.strengthBar1{
+    position: absolute;
+    width: 5px;
+    height: 22px;
+    left: 77%;
+    top: 27%;
+
+    background: #17161E;
+    border: 2.1px solid #FFFFFF;
+}
+
+.strengthBar2{
+    position: absolute;
+    width: 5px;
+    height: 22px;
+    left: 81%;
+    top: 27%;
+
+    background: #17161E;
+    border: 2.1px solid #FFFFFF;
+}
+
+.strengthBar3{
+    position: absolute;
+    width: 5px;
+    height: 22px;
+    left: 85%;
+    top: 27%;
+
+    background: #17161E;
+    border: 2.1px solid #FFFFFF;
+}
+
+.strengthBar4{
+    position: absolute;
+    width: 5px;
+    height: 22px;
+    left: 89%;
+    top: 27%;
+
+    background: #17161E;
+    border: 2.1px solid #FFFFFF;
+}
+
+.generate{
+    position: absolute;
+    width: 400px;
+    height: 59px;
+    left: 50%;
+    top: 89%;
+    transform: translate(-50%, -50%);
+    font-style: monospace;
+    background: #A4FFAF;
+}
+
+.copy{
+    position: absolute;
+    top: 28%;
+    left: 87%;
+    transition: translate(-50%, -50%);
+    background: #2f2e37;
+    outline: none;
+}
+
+.password h1{
+    font-family: monospace;
+    color: #82808E;
+    position: absolute;
+    top: 29%;
+    left: 6%;
+    outline: none;
+}
