@@ -69,7 +69,7 @@ position: absolute;
     left: 8%;
     top: 25.5%;
 
-background: #24232B;
+
 border: 2px solid #FFFFFF;
 }
 .lowercase{
@@ -79,7 +79,7 @@ border: 2px solid #FFFFFF;
         left: 8%;
         top: 35.5%;
     
-    background: #24232B;
+
     border: 2px solid #FFFFFF;
 }
 .numbers{
@@ -89,7 +89,7 @@ border: 2px solid #FFFFFF;
             left: 8%;
             top: 45.5%;
         
-        background: #24232B;
+
         border: 2px solid #FFFFFF;
 }
 .symbols{
@@ -99,7 +99,7 @@ border: 2px solid #FFFFFF;
         left: 8%;
         top: 55.5%;
             
-       background: #24232B;
+
     border: 2px solid #FFFFFF;
 }
 
@@ -173,7 +173,6 @@ background: #18171F;
     left: 77%;
     top: 27%;
 
-    background: #17161E;
     border: 2.1px solid #FFFFFF;
 }
 
@@ -184,7 +183,6 @@ background: #18171F;
     left: 81%;
     top: 27%;
 
-    background: #17161E;
     border: 2.1px solid #FFFFFF;
 }
 
@@ -195,7 +193,6 @@ background: #18171F;
     left: 85%;
     top: 27%;
 
-    background: #17161E;
     border: 2.1px solid #FFFFFF;
 }
 
@@ -206,7 +203,6 @@ background: #18171F;
     left: 89%;
     top: 27%;
 
-    background: #17161E;
     border: 2.1px solid #FFFFFF;
 }
 
@@ -233,6 +229,7 @@ background: #18171F;
 .password h1{
     font-family: monospace;
     color: #82808E;
+    font-weight: 100;
     position: absolute;
     top: 29%;
     left: 6%;
