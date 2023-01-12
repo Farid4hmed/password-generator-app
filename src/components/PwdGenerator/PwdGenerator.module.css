@@ -148,7 +148,7 @@ border: 2px solid #FFFFFF;
     width: 85%;
     height: 12.5%;
     left: 50%;
-    top: 71.5%;
+    top: 71%;
     transform: translate(-50%, -50%);
 
 background: #18171F;
@@ -211,7 +211,7 @@ background: #18171F;
     width: 400px;
     height: 59px;
     left: 50%;
-    top: 89%;
+    top: 88%;
     transform: translate(-50%, -50%);
     font-style: monospace;
     background: #A4FFAF;
@@ -234,4 +234,13 @@ background: #18171F;
     top: 29%;
     left: 6%;
     outline: none;
+}
+
+.error{
+    position: absolute;
+    color: red;
+    font-family: monospace;
+    left: 19%;
+    top: 95.5%;
+
 }
