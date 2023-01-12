@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import styles from "./PwdGenerator.module.css";
 import ReactSlider from "react-slider";
@@ -55,62 +55,58 @@ export default function PwdGenerator() {
         return charSet.charAt(Math.floor(Math.random() * charSet.length));
     }
 
-    function generatePassword(pwd = "") {
+    function generatePassword() {
         if (value < options) {
             alert(`Password length should be atleast ${options}`);
         }
-        else {
-            if (options === 4) {
-                setBarCol4("#A4FFAF");
-                setBarCol3("#A4FFAF");
-                setBarCol2("#A4FFAF");
-                setBarCol1("#A4FFAF");
+        else if (options !== 0) {
+            var pwd = "";
+            while (pwd.length < value) {
+                if (uppercase === "#A4FFAF") pwd += getRandomChar(upperCaseSet);
+                if (pwd.length >= value) break;
+                if (lowercase === "#A4FFAF") pwd += getRandomChar(lowerCaseSet);
+                if (pwd.length >= value) break;
+                if (numbers === "#A4FFAF") pwd += getRandomChar(numbersSet);
+                if (pwd.length >= value) break;
+                if (symbols === "#A4FFAF") pwd += getRandomChar(symbolSet);
             }
-            else if (options === 3) {
-                setBarCol4("#24232B");
-                setBarCol3("#A4FFAF");
-                setBarCol2("#A4FFAF");
-                setBarCol1("#A4FFAF");
-            }
-            else if (options === 2) {
-                setBarCol4("#24232B");
-                setBarCol3("#24232B");
-                setBarCol2("#A4FFAF");
-                setBarCol1("#A4FFAF");
-            }
-            else if (options === 1) {
-                setBarCol4("#24232B");
-                setBarCol3("#24232B");
-                setBarCol2("#24232B");
-                setBarCol1("#A4FFAF");
-            }
-            else if (options === 0) {
-                alert("Select alteast one character type.")
-                setBarCol4("#24232B");
-                setBarCol3("#24232B");
-                setBarCol2("#24232B");
-                setBarCol1("#24232B");
-            }
-            if (options !== 0) {
-                let pwd = "";
-                while (pwd.length < value) {
-                    if (uppercase === "#A4FFAF") pwd += getRandomChar(upperCaseSet);
-                    if (pwd.length >= value) break;
-                    if (lowercase === "#A4FFAF") pwd += getRandomChar(lowerCaseSet);
-                    if (pwd.length >= value) break;
-                    if (numbers === "#A4FFAF") pwd += getRandomChar(numbersSet);
-                    if (pwd.length >= value) break;
-                    if (symbols === "#A4FFAF") pwd += getRandomChar(symbolSet);
-                }
-                setPassword(pwd);
-            }
-
-
-            return;
+            setPassword(pwd);
         }
+        else {alert("Select Atleast one Character Type");}
     }
 
-
+    useEffect(() => {
+        if (options === 4) {
+            setBarCol4("#A4FFAF");
+            setBarCol3("#A4FFAF");
+            setBarCol2("#A4FFAF");
+            setBarCol1("#A4FFAF");
+        }
+        else if (options === 3) {
+            setBarCol4("#24232B");
+            setBarCol3("#A4FFAF");
+            setBarCol2("#A4FFAF");
+            setBarCol1("#A4FFAF");
+        }
+        else if (options === 2) {
+            setBarCol4("#24232B");
+            setBarCol3("#24232B");
+            setBarCol2("#A4FFAF");
+            setBarCol1("#A4FFAF");
+        }
+        else if (options === 1) {
+            setBarCol4("#24232B");
+            setBarCol3("#24232B");
+            setBarCol2("#24232B");
+            setBarCol1("#A4FFAF");
+        }
+        else if (options === 0) {
+            setBarCol4("#24232B");
+            setBarCol3("#24232B");
+            setBarCol2("#24232B");
+            setBarCol1("#24232B");
+        }
+    }, [options]);
 
 
 
@@ -118,9 +114,6 @@ export default function PwdGenerator() {
         setValue(val);
     }
 
-    // function generatePassword(){
-
-    // }
     function handleCopy() {
         alert("Copied!");
     }
@@ -179,5 +172,3 @@ export default function PwdGenerator() {
 }
 
 
-
-//
