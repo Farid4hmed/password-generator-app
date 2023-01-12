@@ -62,6 +62,7 @@ export default function PwdGenerator(props) {
     function generatePassword() {
         if (value < options) {
             setCharLenErr(true);
+            if(setCharTypeErr)setCharTypeErr(false);
             return;
         }
         else {setCharLenErr(false);}
