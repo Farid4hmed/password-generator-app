@@ -3,7 +3,8 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import styles from "./PwdGenerator.module.css";
 import ReactSlider from "react-slider";
 
-export default function PwdGenerator() {
+
+export default function PwdGenerator(props) {
     const upperCaseSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const lowerCaseSet = "abcdefghijklmnopqrstuvwxyz";
     const numbersSet = "1234567890";
@@ -70,9 +71,15 @@ export default function PwdGenerator() {
                 if (pwd.length >= value) break;
                 if (symbols === "#A4FFAF") pwd += getRandomChar(symbolSet);
             }
+            if(password !== "P4$5W0rD!"){
+            props.recent.unshift(password);
+            props.setRecent([...props.recent]);
+            console.log(props.recent);
+            }
             setPassword(pwd);
+
         }
-        else {alert("Select Atleast one Character Type");}
+        else { alert("Select Atleast one Character Type"); }
     }
 
     useEffect(() => {
