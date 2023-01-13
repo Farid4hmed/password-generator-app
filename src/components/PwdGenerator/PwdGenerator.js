@@ -82,11 +82,22 @@ export default function PwdGenerator(props) {
             props.setRecent([...props.recent]);
             console.log(props.recent);
             }
-            setPassword(pwd);
+            let shuffledPwd = shuffle(pwd);
+            setPassword(shuffledPwd);
             setCharTypeErr(false);
         }
         else { setCharTypeErr(true); }
     }
+
+    function shuffle(s) {
+        var arr = s.split('');         
+  
+        arr.sort(function() {
+        return 0.5 - Math.random();
+        });  
+        s = arr.join('');         
+        return s;                   
+      }
 
     useEffect(() => {
         if (options === 4) {
@@ -159,7 +170,7 @@ export default function PwdGenerator(props) {
                     value={value}
                     onChange={val => { handleChange(val) }}
                 />
-                {charLenErr? (<p className={styles.error}>Character length must be atleast {options}.</p>): ""}
+                {charLenErr && options>0? (<p className={styles.error}>Character length must be atleast {options}.</p>): ""}
                 <button style={{ 'backgroundColor': `${uppercase}` }} className={styles.uppercase} onClick={UpperCase}></button><p className={styles.text1}>Include Uppercase Letters</p>
                 <button style={{ 'backgroundColor': `${lowercase}` }} className={styles.lowercase} onClick={LowerCase}></button><p className={styles.text2}>Include Lowercase Letters</p>
                 <button style={{ 'backgroundColor': `${numbers}` }} className={styles.numbers} onClick={Numbers}></button><p className={styles.text3}>Include Numbers</p>
